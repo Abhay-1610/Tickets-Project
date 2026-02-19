@@ -1,0 +1,15 @@
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\bin\Debug\net8.0\TicketsProject.Application.deps.json
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\bin\Debug\net8.0\TicketsProject.Application.dll
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\bin\Debug\net8.0\TicketsProject.Application.pdb
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\obj\Debug\net8.0\TicketsProject.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\obj\Debug\net8.0\TicketsProject.Application.AssemblyInfoInputs.cache
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\obj\Debug\net8.0\TicketsProject.Application.AssemblyInfo.cs
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\obj\Debug\net8.0\TicketsProject.Application.csproj.CoreCompileInputs.cache
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\obj\Debug\net8.0\TicketsProject.Application.dll
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\obj\Debug\net8.0\refint\TicketsProject.Application.dll
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\obj\Debug\net8.0\TicketsProject.Application.pdb
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\obj\Debug\net8.0\ref\TicketsProject.Application.dll
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\bin\Debug\net8.0\TicketsProject.Domain.dll
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\bin\Debug\net8.0\TicketsProject.Domain.pdb
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\obj\Debug\net8.0\TicketsProject.Application.csproj.AssemblyReference.cache
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Application\obj\Debug\net8.0\TicketsP.07CC1857.Up2Date

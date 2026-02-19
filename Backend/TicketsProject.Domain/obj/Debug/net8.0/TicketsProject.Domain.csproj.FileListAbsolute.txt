@@ -1,0 +1,11 @@
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Domain\obj\Debug\net8.0\TicketsProject.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Domain\obj\Debug\net8.0\TicketsProject.Domain.AssemblyInfoInputs.cache
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Domain\obj\Debug\net8.0\TicketsProject.Domain.AssemblyInfo.cs
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Domain\obj\Debug\net8.0\TicketsProject.Domain.csproj.CoreCompileInputs.cache
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Domain\bin\Debug\net8.0\TicketsProject.Domain.deps.json
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Domain\bin\Debug\net8.0\TicketsProject.Domain.dll
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Domain\bin\Debug\net8.0\TicketsProject.Domain.pdb
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Domain\obj\Debug\net8.0\TicketsProject.Domain.dll
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Domain\obj\Debug\net8.0\refint\TicketsProject.Domain.dll
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Domain\obj\Debug\net8.0\TicketsProject.Domain.pdb
+C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Domain\obj\Debug\net8.0\ref\TicketsProject.Domain.dll

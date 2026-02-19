@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ASP.NET CORE\\TicketsProject.Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9D41A9E2-EB10-48E5-B4F2-927A13A7F12D}|TicketsProject.Api\\TicketsProject.Api.csproj|c:\\asp.net core\\ticketsproject.api\\ticketsproject.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D41A9E2-EB10-48E5-B4F2-927A13A7F12D}|TicketsProject.Api\\TicketsProject.Api.csproj|solutionrelative:ticketsproject.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D41A9E2-EB10-48E5-B4F2-927A13A7F12D}|TicketsProject.Api\\TicketsProject.Api.csproj|c:\\asp.net core\\ticketsproject.api\\ticketsproject.api\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D41A9E2-EB10-48E5-B4F2-927A13A7F12D}|TicketsProject.Api\\TicketsProject.Api.csproj|solutionrelative:ticketsproject.api\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D41A9E2-EB10-48E5-B4F2-927A13A7F12D}|TicketsProject.Api\\TicketsProject.Api.csproj|c:\\asp.net core\\ticketsproject.api\\ticketsproject.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D41A9E2-EB10-48E5-B4F2-927A13A7F12D}|TicketsProject.Api\\TicketsProject.Api.csproj|solutionrelative:ticketsproject.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52558894-8984-48B2-B588-CE0CEA19198F}|TicketsProject.Application\\TicketsProject.Application.csproj|c:\\asp.net core\\ticketsproject.api\\ticketsproject.application\\dtos\\auth\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52558894-8984-48B2-B588-CE0CEA19198F}|TicketsProject.Application\\TicketsProject.Application.csproj|solutionrelative:ticketsproject.application\\dtos\\auth\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GlobalExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\ASP.NET CORE\\TicketsProject.Api\\TicketsProject.Api\\Middleware\\GlobalExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "TicketsProject.Api\\Middleware\\GlobalExceptionMiddleware.cs",
+              "ToolTip": "C:\\ASP.NET CORE\\TicketsProject.Api\\TicketsProject.Api\\Middleware\\GlobalExceptionMiddleware.cs",
+              "RelativeToolTip": "TicketsProject.Api\\Middleware\\GlobalExceptionMiddleware.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAiwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T11:20:17.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ASP.NET CORE\\TicketsProject.Api\\TicketsProject.Api\\Program.cs",
+              "RelativeDocumentMoniker": "TicketsProject.Api\\Program.cs",
+              "ToolTip": "C:\\ASP.NET CORE\\TicketsProject.Api\\TicketsProject.Api\\Program.cs*",
+              "RelativeToolTip": "TicketsProject.Api\\Program.cs*",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T11:19:48.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\ASP.NET CORE\\TicketsProject.Api\\TicketsProject.Api\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "TicketsProject.Api\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\ASP.NET CORE\\TicketsProject.Api\\TicketsProject.Api\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "TicketsProject.Api\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T09:12:48.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginResponseDto.cs",
+              "DocumentMoniker": "C:\\ASP.NET CORE\\TicketsProject.Api\\TicketsProject.Application\\DTOs\\Auth\\LoginResponseDto.cs",
+              "RelativeDocumentMoniker": "TicketsProject.Application\\DTOs\\Auth\\LoginResponseDto.cs",
+              "ToolTip": "C:\\ASP.NET CORE\\TicketsProject.Api\\TicketsProject.Application\\DTOs\\Auth\\LoginResponseDto.cs",
+              "RelativeToolTip": "TicketsProject.Application\\DTOs\\Auth\\LoginResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T09:26:39.527Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

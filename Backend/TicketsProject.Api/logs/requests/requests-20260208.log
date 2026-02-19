@@ -1,0 +1,1543 @@
+2026-02-08 00:01:20.750 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/admin/users - null null
+2026-02-08 00:01:20.777 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:01:20.777 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/admin/users - 204 null null 27.2005ms
+2026-02-08 00:01:20.793 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/admin/users - null null
+2026-02-08 00:01:20.795 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:01:20.799 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api)'
+2026-02-08 00:01:20.800 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller TicketsProject.Api.Controllers.AdminController (TicketsProject.Api).
+2026-02-08 00:01:22.609 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2026-02-08 00:01:22.618 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:01:22.620 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:01:22.622 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:01:22.625 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:01:22.626 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Admin.AdminUserResult, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 00:01:22.626 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api) in 1825.6215ms
+2026-02-08 00:01:22.626 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api)'
+2026-02-08 00:01:22.626 +05:30 [INF] HTTP GET /api/admin/users responded 200 in 1827ms | UserId=79b915ef-074e-403e-b073-2775202c6e7f Role=Admin
+2026-02-08 00:01:22.626 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/admin/users - 200 null application/json; charset=utf-8 1833.4863ms
+2026-02-08 00:01:25.412 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 00:01:25.413 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:01:25.413 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 1.3724ms
+2026-02-08 00:01:25.422 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 00:01:25.423 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:01:25.424 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 00:01:25.425 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 00:01:25.456 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Status], [t].[CreatedAt]
+FROM [Tickets] AS [t]
+2026-02-08 00:01:25.458 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 00:01:25.458 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 32.8742ms
+2026-02-08 00:01:25.458 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 00:01:25.458 +05:30 [INF] HTTP GET /api/tickets responded 200 in 34ms | UserId=79b915ef-074e-403e-b073-2775202c6e7f Role=Admin
+2026-02-08 00:01:25.459 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 38.2166ms
+2026-02-08 00:01:35.318 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/admin/users/3bbe00d6-10ef-45f5-b8df-f03a16ccd8e8/block - null null
+2026-02-08 00:01:35.319 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:01:35.319 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/admin/users/3bbe00d6-10ef-45f5-b8df-f03a16ccd8e8/block - 204 null null 1.7873ms
+2026-02-08 00:01:35.325 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/admin/users/3bbe00d6-10ef-45f5-b8df-f03a16ccd8e8/block - null 0
+2026-02-08 00:01:35.328 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:01:35.330 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AdminController.BlockUser (TicketsProject.Api)'
+2026-02-08 00:01:35.349 +05:30 [INF] Route matched with {action = "BlockUser", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BlockUser(System.String) on controller TicketsProject.Api.Controllers.AdminController (TicketsProject.Api).
+2026-02-08 00:01:35.490 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-02-08 00:01:35.501 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-08 00:01:35.518 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [RefreshTokenExpiryTime] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2026-02-08 00:01:35.523 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Admin.AdminUserResult'.
+2026-02-08 00:01:35.524 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AdminController.BlockUser (TicketsProject.Api) in 174.499ms
+2026-02-08 00:01:35.524 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AdminController.BlockUser (TicketsProject.Api)'
+2026-02-08 00:01:35.524 +05:30 [INF] HTTP POST /api/admin/users/3bbe00d6-10ef-45f5-b8df-f03a16ccd8e8/block responded 200 in 193ms | UserId=79b915ef-074e-403e-b073-2775202c6e7f Role=Admin
+2026-02-08 00:01:35.524 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/admin/users/3bbe00d6-10ef-45f5-b8df-f03a16ccd8e8/block - 200 null application/json; charset=utf-8 200.5213ms
+2026-02-08 00:01:35.533 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/admin/users - null null
+2026-02-08 00:01:35.533 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:01:35.533 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/admin/users - 204 null null 0.8499ms
+2026-02-08 00:01:35.536 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/admin/users - null null
+2026-02-08 00:01:35.537 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:01:35.537 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api)'
+2026-02-08 00:01:35.537 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller TicketsProject.Api.Controllers.AdminController (TicketsProject.Api).
+2026-02-08 00:01:41.782 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2026-02-08 00:01:41.809 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:01:41.812 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:01:41.815 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:01:41.817 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:01:41.818 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Admin.AdminUserResult, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 00:01:41.818 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api) in 6280.7121ms
+2026-02-08 00:01:41.818 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api)'
+2026-02-08 00:01:41.818 +05:30 [INF] HTTP GET /api/admin/users responded 200 in 6281ms | UserId=79b915ef-074e-403e-b073-2775202c6e7f Role=Admin
+2026-02-08 00:01:41.818 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/admin/users - 200 null application/json; charset=utf-8 6282.5543ms
+2026-02-08 00:02:02.160 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/admin/users/3bbe00d6-10ef-45f5-b8df-f03a16ccd8e8/unblock - null null
+2026-02-08 00:02:02.161 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:02:02.161 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/admin/users/3bbe00d6-10ef-45f5-b8df-f03a16ccd8e8/unblock - 204 null null 2.0136ms
+2026-02-08 00:02:02.168 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/admin/users/3bbe00d6-10ef-45f5-b8df-f03a16ccd8e8/unblock - null 0
+2026-02-08 00:02:02.169 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:02:02.171 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AdminController.UnblockUser (TicketsProject.Api)'
+2026-02-08 00:02:02.192 +05:30 [INF] Route matched with {action = "UnblockUser", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UnblockUser(System.String) on controller TicketsProject.Api.Controllers.AdminController (TicketsProject.Api).
+2026-02-08 00:02:02.212 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-02-08 00:02:02.225 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-08 00:02:02.243 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [RefreshTokenExpiryTime] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2026-02-08 00:02:02.244 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Admin.AdminUserResult'.
+2026-02-08 00:02:02.245 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AdminController.UnblockUser (TicketsProject.Api) in 53.0175ms
+2026-02-08 00:02:02.245 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AdminController.UnblockUser (TicketsProject.Api)'
+2026-02-08 00:02:02.245 +05:30 [INF] HTTP POST /api/admin/users/3bbe00d6-10ef-45f5-b8df-f03a16ccd8e8/unblock responded 200 in 74ms | UserId=79b915ef-074e-403e-b073-2775202c6e7f Role=Admin
+2026-02-08 00:02:02.245 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/admin/users/3bbe00d6-10ef-45f5-b8df-f03a16ccd8e8/unblock - 200 null application/json; charset=utf-8 78.5343ms
+2026-02-08 00:02:02.258 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/admin/users - null null
+2026-02-08 00:02:02.258 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:02:02.258 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/admin/users - 204 null null 1.9531ms
+2026-02-08 00:02:02.264 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/admin/users - null null
+2026-02-08 00:02:02.265 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:02:02.265 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api)'
+2026-02-08 00:02:02.266 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller TicketsProject.Api.Controllers.AdminController (TicketsProject.Api).
+2026-02-08 00:02:08.980 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2026-02-08 00:02:08.994 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:02:08.997 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:02:09.001 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:02:09.011 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:02:09.012 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Admin.AdminUserResult, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 00:02:09.012 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api) in 6746.7122ms
+2026-02-08 00:02:09.013 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api)'
+2026-02-08 00:02:09.013 +05:30 [INF] HTTP GET /api/admin/users responded 200 in 6747ms | UserId=79b915ef-074e-403e-b073-2775202c6e7f Role=Admin
+2026-02-08 00:02:09.013 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/admin/users - 200 null application/json; charset=utf-8 6748.5182ms
+2026-02-08 00:03:06.139 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/admin/agents - null null
+2026-02-08 00:03:06.139 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:03:06.140 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/admin/agents - 204 null null 1.36ms
+2026-02-08 00:03:06.145 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/admin/agents - application/json 50
+2026-02-08 00:03:06.146 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:03:06.148 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AdminController.CreateAgent (TicketsProject.Api)'
+2026-02-08 00:03:06.161 +05:30 [INF] Route matched with {action = "CreateAgent", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateAgent(TicketsProject.Api.Controllers.CreateAgentRequest) on controller TicketsProject.Api.Controllers.AdminController (TicketsProject.Api).
+2026-02-08 00:03:06.407 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-08 00:03:06.449 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [RefreshToken], [RefreshTokenExpiryTime], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2026-02-08 00:03:06.468 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-02-08 00:03:06.487 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-02-08 00:03:06.496 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-02-08 00:03:06.540 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-08 00:03:06.604 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [RefreshToken] = @p13, [RefreshTokenExpiryTime] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2026-02-08 00:03:06.648 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Admin.AdminUserResult'.
+2026-02-08 00:03:06.648 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AdminController.CreateAgent (TicketsProject.Api) in 486.9555ms
+2026-02-08 00:03:06.649 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AdminController.CreateAgent (TicketsProject.Api)'
+2026-02-08 00:03:06.649 +05:30 [INF] HTTP POST /api/admin/agents responded 200 in 500ms | UserId=79b915ef-074e-403e-b073-2775202c6e7f Role=Admin
+2026-02-08 00:03:06.649 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/admin/agents - 200 null application/json; charset=utf-8 503.8718ms
+2026-02-08 00:03:06.659 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/admin/users - null null
+2026-02-08 00:03:06.660 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:03:06.660 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/admin/users - 204 null null 1.681ms
+2026-02-08 00:03:06.666 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/admin/users - null null
+2026-02-08 00:03:06.666 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:03:06.668 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api)'
+2026-02-08 00:03:06.668 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller TicketsProject.Api.Controllers.AdminController (TicketsProject.Api).
+2026-02-08 00:03:09.632 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2026-02-08 00:03:09.643 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:03:09.651 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:03:09.656 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:03:09.660 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:03:09.665 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:03:09.666 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Admin.AdminUserResult, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 00:03:09.667 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api) in 2998.3754ms
+2026-02-08 00:03:09.667 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api)'
+2026-02-08 00:03:09.667 +05:30 [INF] HTTP GET /api/admin/users responded 200 in 2999ms | UserId=79b915ef-074e-403e-b073-2775202c6e7f Role=Admin
+2026-02-08 00:03:09.668 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/admin/users - 200 null application/json; charset=utf-8 3003.2733ms
+2026-02-08 00:03:43.065 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/auth/login - null null
+2026-02-08 00:03:43.067 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:03:43.067 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/auth/login - 204 null null 2.5133ms
+2026-02-08 00:03:43.076 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/auth/login - application/json 50
+2026-02-08 00:03:43.076 +05:30 [INF] CORS policy execution successful.
+2026-02-08 00:03:43.077 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 00:03:43.077 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicketsProject.Application.DTOs.Auth.LoginResponseDto]] Login(TicketsProject.Application.DTOs.Auth.LoginRequestDto) on controller TicketsProject.Api.Controllers.AuthController (TicketsProject.Api).
+2026-02-08 00:03:43.109 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-08 00:03:43.278 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 00:03:43.282 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-08 00:03:43.291 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [RefreshTokenExpiryTime] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2026-02-08 00:03:43.291 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Auth.LoginResponseDto'.
+2026-02-08 00:03:43.292 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api) in 214.1512ms
+2026-02-08 00:03:43.292 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 00:03:43.292 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 214ms | UserId=null Role=null
+2026-02-08 00:03:43.292 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/auth/login - 200 null application/json; charset=utf-8 216.2791ms
+2026-02-08 14:25:57.309 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/auth/login - null null
+2026-02-08 14:25:57.311 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:25:57.312 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/auth/login - 204 null null 3.1485ms
+2026-02-08 14:25:57.322 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/auth/login - application/json 50
+2026-02-08 14:25:57.323 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:25:57.346 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '07-02-2026 8.13.43 PM', Current time (UTC): '08-02-2026 8.55.57 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-08 14:25:57.425 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '07-02-2026 8.13.43 PM', Current time (UTC): '08-02-2026 8.55.57 AM'.
+2026-02-08 14:25:57.426 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 14:25:57.427 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicketsProject.Application.DTOs.Auth.LoginResponseDto]] Login(TicketsProject.Application.DTOs.Auth.LoginRequestDto) on controller TicketsProject.Api.Controllers.AuthController (TicketsProject.Api).
+2026-02-08 14:25:57.500 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-08 14:25:57.655 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 14:25:57.660 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-08 14:25:57.673 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [RefreshTokenExpiryTime] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2026-02-08 14:25:57.674 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Auth.LoginResponseDto'.
+2026-02-08 14:25:57.674 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api) in 247.6402ms
+2026-02-08 14:25:57.674 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 14:25:57.674 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 248ms | UserId=null Role=null
+2026-02-08 14:25:57.675 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/auth/login - 200 null application/json; charset=utf-8 352.5046ms
+2026-02-08 14:26:13.080 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/auth/login - null null
+2026-02-08 14:26:13.080 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:13.081 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/auth/login - 204 null null 1.1421ms
+2026-02-08 14:26:13.087 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/auth/login - application/json 58
+2026-02-08 14:26:13.088 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:13.088 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 14:26:13.089 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicketsProject.Application.DTOs.Auth.LoginResponseDto]] Login(TicketsProject.Application.DTOs.Auth.LoginRequestDto) on controller TicketsProject.Api.Controllers.AuthController (TicketsProject.Api).
+2026-02-08 14:26:13.103 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-08 14:26:13.276 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 14:26:13.279 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-08 14:26:13.282 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [RefreshTokenExpiryTime] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2026-02-08 14:26:13.282 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Auth.LoginResponseDto'.
+2026-02-08 14:26:13.283 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api) in 193.8764ms
+2026-02-08 14:26:13.283 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 14:26:13.283 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 194ms | UserId=null Role=null
+2026-02-08 14:26:13.283 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/auth/login - 200 null application/json; charset=utf-8 196.5265ms
+2026-02-08 14:26:13.343 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/my - null null
+2026-02-08 14:26:13.345 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:13.346 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/my - 204 null null 2.8364ms
+2026-02-08 14:26:13.356 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets/my - null null
+2026-02-08 14:26:13.357 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:13.358 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetMyTickets (TicketsProject.Api)'
+2026-02-08 14:26:13.369 +05:30 [INF] Route matched with {action = "GetMyTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 14:26:13.390 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__customerId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Status], [t].[CreatedAt]
+FROM [Tickets] AS [t]
+WHERE [t].[CustomerId] = @__customerId_0
+2026-02-08 14:26:13.390 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 14:26:13.391 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetMyTickets (TicketsProject.Api) in 21.8282ms
+2026-02-08 14:26:13.391 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetMyTickets (TicketsProject.Api)'
+2026-02-08 14:26:13.391 +05:30 [INF] HTTP GET /api/tickets/my responded 200 in 33ms | UserId=42ee6d2c-8236-488c-b49d-4f9b5b075b13 Role=Customer
+2026-02-08 14:26:13.391 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets/my - 200 null application/json; charset=utf-8 34.918ms
+2026-02-08 14:26:28.422 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/messages/ticket/1 - null null
+2026-02-08 14:26:28.424 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:28.424 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/messages/ticket/1 - 204 null null 2.3855ms
+2026-02-08 14:26:28.440 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/hubs/tickets/negotiate?negotiateVersion=1 - null null
+2026-02-08 14:26:28.441 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:28.441 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/messages/ticket/1 - null null
+2026-02-08 14:26:28.441 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/hubs/tickets/negotiate?negotiateVersion=1 - 204 null null 1.0394ms
+2026-02-08 14:26:28.448 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:28.449 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.MessageController.GetByTicket (TicketsProject.Api)'
+2026-02-08 14:26:28.476 +05:30 [INF] Route matched with {action = "GetByTicket", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[TicketsProject.Application.DTOs.Messages.TicketMessageDto]]] GetByTicket(Int32) on controller TicketsProject.Api.Controllers.MessageController (TicketsProject.Api).
+2026-02-08 14:26:28.486 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/hubs/tickets/negotiate?negotiateVersion=1 - null 0
+2026-02-08 14:26:28.487 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:28.521 +05:30 [INF] Executing endpoint '/hubs/tickets/negotiate'
+2026-02-08 14:26:28.558 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 14:26:28.560 +05:30 [INF] Executed endpoint '/hubs/tickets/negotiate'
+2026-02-08 14:26:28.561 +05:30 [INF] HTTP POST /hubs/tickets/negotiate responded 200 in 39ms | UserId=42ee6d2c-8236-488c-b49d-4f9b5b075b13 Role=Customer
+2026-02-08 14:26:28.561 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/hubs/tickets/negotiate?negotiateVersion=1 - 200 316 application/json 75.5137ms
+2026-02-08 14:26:28.573 +05:30 [INF] Request starting HTTP/2 CONNECT https://localhost:7073/hubs/tickets?id=P0PGVc2oJEVUR6P_XZgR5g&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQyZWU2ZDJjLTgyMzYtNDg4Yy1iNDlkLTRmOWI1YjA3NWIxMyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFiaGF5X2N1c3RvbWVyQGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkN1c3RvbWVyIiwidXNlcklkIjoiNDJlZTZkMmMtODIzNi00ODhjLWI0OWQtNGY5YjViMDc1YjEzIiwiZW1haWwiOiJhYmhheV9jdXN0b21lckBnbWFpbC5jb20iLCJyb2xlIjoiQ3VzdG9tZXIiLCJleHAiOjE3NzA1NDY5NzN9.7XcNooYfHPg7Km9WCle78X44LvYgELmWY4BlerzM_NQ - null null
+2026-02-08 14:26:28.574 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:28.576 +05:30 [INF] Executing endpoint '/hubs/tickets'
+2026-02-08 14:26:28.723 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[TicketId], [t].[SenderId], [t].[Message], CASE
+    WHEN [t].[MessageType] = 1 THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END AS [IsSystem], [t].[CreatedAt]
+FROM [TicketMessages] AS [t]
+WHERE [t].[TicketId] = @__ticketId_0
+ORDER BY [t].[CreatedAt]
+2026-02-08 14:26:28.726 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Messages.TicketMessageDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 14:26:28.732 +05:30 [INF] Executed action TicketsProject.Api.Controllers.MessageController.GetByTicket (TicketsProject.Api) in 256.0851ms
+2026-02-08 14:26:28.732 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.MessageController.GetByTicket (TicketsProject.Api)'
+2026-02-08 14:26:28.732 +05:30 [INF] HTTP GET /api/messages/ticket/1 responded 200 in 283ms | UserId=42ee6d2c-8236-488c-b49d-4f9b5b075b13 Role=Customer
+2026-02-08 14:26:28.733 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/messages/ticket/1 - 200 null application/json; charset=utf-8 292.1806ms
+2026-02-08 14:26:33.074 +05:30 [INF] Executed endpoint '/hubs/tickets'
+2026-02-08 14:26:33.074 +05:30 [INF] HTTP CONNECT /hubs/tickets responded 200 in 4498ms | UserId=42ee6d2c-8236-488c-b49d-4f9b5b075b13 Role=Customer
+2026-02-08 14:26:33.074 +05:30 [INF] Request finished HTTP/2 CONNECT https://localhost:7073/hubs/tickets?id=P0PGVc2oJEVUR6P_XZgR5g&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQyZWU2ZDJjLTgyMzYtNDg4Yy1iNDlkLTRmOWI1YjA3NWIxMyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFiaGF5X2N1c3RvbWVyQGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkN1c3RvbWVyIiwidXNlcklkIjoiNDJlZTZkMmMtODIzNi00ODhjLWI0OWQtNGY5YjViMDc1YjEzIiwiZW1haWwiOiJhYmhheV9jdXN0b21lckBnbWFpbC5jb20iLCJyb2xlIjoiQ3VzdG9tZXIiLCJleHAiOjE3NzA1NDY5NzN9.7XcNooYfHPg7Km9WCle78X44LvYgELmWY4BlerzM_NQ - 200 null null 4502.2647ms
+2026-02-08 14:26:33.077 +05:30 [INF] Connection id "0HNJ6EHT71CVE", Request id "0HNJ6EHT71CVE:00000003": the application completed without reading the entire request body.
+2026-02-08 14:26:37.940 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/messages/ticket/2 - null null
+2026-02-08 14:26:37.942 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/hubs/tickets/negotiate?negotiateVersion=1 - null null
+2026-02-08 14:26:37.943 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:37.943 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:37.943 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/hubs/tickets/negotiate?negotiateVersion=1 - 204 null null 1.7706ms
+2026-02-08 14:26:37.943 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/messages/ticket/2 - 204 null null 3.9115ms
+2026-02-08 14:26:37.952 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/hubs/tickets/negotiate?negotiateVersion=1 - null 0
+2026-02-08 14:26:37.953 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/messages/ticket/2 - null null
+2026-02-08 14:26:37.953 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:37.954 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:37.954 +05:30 [INF] Executing endpoint '/hubs/tickets/negotiate'
+2026-02-08 14:26:37.954 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.MessageController.GetByTicket (TicketsProject.Api)'
+2026-02-08 14:26:37.955 +05:30 [INF] Route matched with {action = "GetByTicket", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[TicketsProject.Application.DTOs.Messages.TicketMessageDto]]] GetByTicket(Int32) on controller TicketsProject.Api.Controllers.MessageController (TicketsProject.Api).
+2026-02-08 14:26:37.956 +05:30 [INF] Executed endpoint '/hubs/tickets/negotiate'
+2026-02-08 14:26:37.956 +05:30 [INF] HTTP POST /hubs/tickets/negotiate responded 200 in 1ms | UserId=42ee6d2c-8236-488c-b49d-4f9b5b075b13 Role=Customer
+2026-02-08 14:26:37.956 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/hubs/tickets/negotiate?negotiateVersion=1 - 200 316 application/json 4.8885ms
+2026-02-08 14:26:37.967 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 14:26:37.971 +05:30 [INF] Request starting HTTP/2 CONNECT https://localhost:7073/hubs/tickets?id=qe-iQXvjvj2ntb_Ed4t4Sg&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQyZWU2ZDJjLTgyMzYtNDg4Yy1iNDlkLTRmOWI1YjA3NWIxMyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFiaGF5X2N1c3RvbWVyQGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkN1c3RvbWVyIiwidXNlcklkIjoiNDJlZTZkMmMtODIzNi00ODhjLWI0OWQtNGY5YjViMDc1YjEzIiwiZW1haWwiOiJhYmhheV9jdXN0b21lckBnbWFpbC5jb20iLCJyb2xlIjoiQ3VzdG9tZXIiLCJleHAiOjE3NzA1NDY5NzN9.7XcNooYfHPg7Km9WCle78X44LvYgELmWY4BlerzM_NQ - null null
+2026-02-08 14:26:37.971 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:37.972 +05:30 [INF] Executing endpoint '/hubs/tickets'
+2026-02-08 14:26:37.975 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[TicketId], [t].[SenderId], [t].[Message], CASE
+    WHEN [t].[MessageType] = 1 THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END AS [IsSystem], [t].[CreatedAt]
+FROM [TicketMessages] AS [t]
+WHERE [t].[TicketId] = @__ticketId_0
+ORDER BY [t].[CreatedAt]
+2026-02-08 14:26:37.978 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Messages.TicketMessageDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 14:26:37.984 +05:30 [INF] Executed action TicketsProject.Api.Controllers.MessageController.GetByTicket (TicketsProject.Api) in 29.0357ms
+2026-02-08 14:26:37.985 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.MessageController.GetByTicket (TicketsProject.Api)'
+2026-02-08 14:26:37.985 +05:30 [INF] HTTP GET /api/messages/ticket/2 responded 200 in 30ms | UserId=42ee6d2c-8236-488c-b49d-4f9b5b075b13 Role=Customer
+2026-02-08 14:26:37.985 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/messages/ticket/2 - 200 null application/json; charset=utf-8 33.4397ms
+2026-02-08 14:26:40.525 +05:30 [INF] Executed endpoint '/hubs/tickets'
+2026-02-08 14:26:40.526 +05:30 [INF] HTTP CONNECT /hubs/tickets responded 200 in 2553ms | UserId=42ee6d2c-8236-488c-b49d-4f9b5b075b13 Role=Customer
+2026-02-08 14:26:40.526 +05:30 [INF] Request finished HTTP/2 CONNECT https://localhost:7073/hubs/tickets?id=qe-iQXvjvj2ntb_Ed4t4Sg&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQyZWU2ZDJjLTgyMzYtNDg4Yy1iNDlkLTRmOWI1YjA3NWIxMyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFiaGF5X2N1c3RvbWVyQGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkN1c3RvbWVyIiwidXNlcklkIjoiNDJlZTZkMmMtODIzNi00ODhjLWI0OWQtNGY5YjViMDc1YjEzIiwiZW1haWwiOiJhYmhheV9jdXN0b21lckBnbWFpbC5jb20iLCJyb2xlIjoiQ3VzdG9tZXIiLCJleHAiOjE3NzA1NDY5NzN9.7XcNooYfHPg7Km9WCle78X44LvYgELmWY4BlerzM_NQ - 200 null null 2555.2963ms
+2026-02-08 14:26:40.526 +05:30 [INF] Connection id "0HNJ6EHT71CVE", Request id "0HNJ6EHT71CVE:00000007": the application completed without reading the entire request body.
+2026-02-08 14:26:53.442 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/messages/ticket/3 - null null
+2026-02-08 14:26:53.442 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:53.443 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/messages/ticket/3 - 204 null null 1.5783ms
+2026-02-08 14:26:53.451 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/hubs/tickets/negotiate?negotiateVersion=1 - null null
+2026-02-08 14:26:53.452 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:53.452 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/hubs/tickets/negotiate?negotiateVersion=1 - 204 null null 0.6081ms
+2026-02-08 14:26:53.463 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/messages/ticket/3 - null null
+2026-02-08 14:26:53.463 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:53.465 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/hubs/tickets/negotiate?negotiateVersion=1 - null 0
+2026-02-08 14:26:53.466 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:53.469 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.MessageController.GetByTicket (TicketsProject.Api)'
+2026-02-08 14:26:53.469 +05:30 [INF] Route matched with {action = "GetByTicket", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[TicketsProject.Application.DTOs.Messages.TicketMessageDto]]] GetByTicket(Int32) on controller TicketsProject.Api.Controllers.MessageController (TicketsProject.Api).
+2026-02-08 14:26:53.476 +05:30 [INF] Executing endpoint '/hubs/tickets/negotiate'
+2026-02-08 14:26:53.476 +05:30 [INF] Executed endpoint '/hubs/tickets/negotiate'
+2026-02-08 14:26:53.477 +05:30 [INF] HTTP POST /hubs/tickets/negotiate responded 200 in 0ms | UserId=42ee6d2c-8236-488c-b49d-4f9b5b075b13 Role=Customer
+2026-02-08 14:26:53.477 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/hubs/tickets/negotiate?negotiateVersion=1 - 200 316 application/json 11.4656ms
+2026-02-08 14:26:53.488 +05:30 [INF] Request starting HTTP/2 CONNECT https://localhost:7073/hubs/tickets?id=nuR1f1JAW-beNKhzXLKGqw&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQyZWU2ZDJjLTgyMzYtNDg4Yy1iNDlkLTRmOWI1YjA3NWIxMyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFiaGF5X2N1c3RvbWVyQGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkN1c3RvbWVyIiwidXNlcklkIjoiNDJlZTZkMmMtODIzNi00ODhjLWI0OWQtNGY5YjViMDc1YjEzIiwiZW1haWwiOiJhYmhheV9jdXN0b21lckBnbWFpbC5jb20iLCJyb2xlIjoiQ3VzdG9tZXIiLCJleHAiOjE3NzA1NDY5NzN9.7XcNooYfHPg7Km9WCle78X44LvYgELmWY4BlerzM_NQ - null null
+2026-02-08 14:26:53.488 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:26:53.492 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 14:26:53.495 +05:30 [INF] Executing endpoint '/hubs/tickets'
+2026-02-08 14:26:53.510 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[TicketId], [t].[SenderId], [t].[Message], CASE
+    WHEN [t].[MessageType] = 1 THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END AS [IsSystem], [t].[CreatedAt]
+FROM [TicketMessages] AS [t]
+WHERE [t].[TicketId] = @__ticketId_0
+ORDER BY [t].[CreatedAt]
+2026-02-08 14:26:53.512 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Messages.TicketMessageDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 14:26:53.512 +05:30 [INF] Executed action TicketsProject.Api.Controllers.MessageController.GetByTicket (TicketsProject.Api) in 43.3089ms
+2026-02-08 14:26:53.513 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.MessageController.GetByTicket (TicketsProject.Api)'
+2026-02-08 14:26:53.513 +05:30 [INF] HTTP GET /api/messages/ticket/3 responded 200 in 44ms | UserId=42ee6d2c-8236-488c-b49d-4f9b5b075b13 Role=Customer
+2026-02-08 14:26:53.513 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/messages/ticket/3 - 200 null application/json; charset=utf-8 50.5044ms
+2026-02-08 14:26:55.230 +05:30 [INF] Executed endpoint '/hubs/tickets'
+2026-02-08 14:26:55.230 +05:30 [INF] HTTP CONNECT /hubs/tickets responded 200 in 1735ms | UserId=42ee6d2c-8236-488c-b49d-4f9b5b075b13 Role=Customer
+2026-02-08 14:26:55.231 +05:30 [INF] Request finished HTTP/2 CONNECT https://localhost:7073/hubs/tickets?id=nuR1f1JAW-beNKhzXLKGqw&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQyZWU2ZDJjLTgyMzYtNDg4Yy1iNDlkLTRmOWI1YjA3NWIxMyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFiaGF5X2N1c3RvbWVyQGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkN1c3RvbWVyIiwidXNlcklkIjoiNDJlZTZkMmMtODIzNi00ODhjLWI0OWQtNGY5YjViMDc1YjEzIiwiZW1haWwiOiJhYmhheV9jdXN0b21lckBnbWFpbC5jb20iLCJyb2xlIjoiQ3VzdG9tZXIiLCJleHAiOjE3NzA1NDY5NzN9.7XcNooYfHPg7Km9WCle78X44LvYgELmWY4BlerzM_NQ - 200 null null 1742.6658ms
+2026-02-08 14:26:55.231 +05:30 [INF] Connection id "0HNJ6EHT71CVE", Request id "0HNJ6EHT71CVE:0000000B": the application completed without reading the entire request body.
+2026-02-08 14:27:01.162 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/1 - null null
+2026-02-08 14:27:01.163 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:27:01.163 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/1 - 204 null null 1.7963ms
+2026-02-08 14:27:01.175 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets/1 - null null
+2026-02-08 14:27:01.176 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:27:01.177 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 14:27:01.189 +05:30 [INF] Route matched with {action = "GetDetail", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDetail(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 14:27:01.206 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 14:27:01.240 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 14:27:01.244 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 14:27:01.273 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api) in 83.3315ms
+2026-02-08 14:27:01.273 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 14:27:01.273 +05:30 [INF] HTTP GET /api/tickets/1 responded 200 in 96ms | UserId=42ee6d2c-8236-488c-b49d-4f9b5b075b13 Role=Customer
+2026-02-08 14:27:01.274 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets/1 - 200 null application/json; charset=utf-8 99.7548ms
+2026-02-08 14:27:04.624 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/5 - null null
+2026-02-08 14:27:04.624 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:27:04.625 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/5 - 204 null null 1.1761ms
+2026-02-08 14:27:04.634 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets/5 - null null
+2026-02-08 14:27:04.635 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:27:04.636 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 14:27:04.637 +05:30 [INF] Route matched with {action = "GetDetail", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDetail(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 14:27:04.664 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 14:27:04.668 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 14:27:04.669 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 14:27:04.669 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api) in 32.35ms
+2026-02-08 14:27:04.669 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 14:27:04.669 +05:30 [INF] HTTP GET /api/tickets/5 responded 200 in 33ms | UserId=42ee6d2c-8236-488c-b49d-4f9b5b075b13 Role=Customer
+2026-02-08 14:27:04.670 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets/5 - 200 null application/json; charset=utf-8 35.4878ms
+2026-02-08 14:28:05.246 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/auth/login - null null
+2026-02-08 14:28:05.246 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:28:05.246 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/auth/login - 204 null null 0.4239ms
+2026-02-08 14:28:05.254 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/auth/login - application/json 49
+2026-02-08 14:28:05.254 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:28:05.255 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 14:28:05.256 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicketsProject.Application.DTOs.Auth.LoginResponseDto]] Login(TicketsProject.Application.DTOs.Auth.LoginRequestDto) on controller TicketsProject.Api.Controllers.AuthController (TicketsProject.Api).
+2026-02-08 14:28:05.274 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-08 14:28:05.468 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 14:28:05.474 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-08 14:28:05.481 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [RefreshTokenExpiryTime] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2026-02-08 14:28:05.482 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Auth.LoginResponseDto'.
+2026-02-08 14:28:05.482 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api) in 226.3029ms
+2026-02-08 14:28:05.482 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 14:28:05.482 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 227ms | UserId=null Role=null
+2026-02-08 14:28:05.482 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/auth/login - 200 null application/json; charset=utf-8 228.4655ms
+2026-02-08 14:28:05.542 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 14:28:05.542 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:28:05.542 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 1.0195ms
+2026-02-08 14:28:05.547 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 14:28:05.547 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:28:05.548 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 14:28:05.548 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 14:28:05.555 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Status], [t].[CreatedAt]
+FROM [Tickets] AS [t]
+2026-02-08 14:28:05.557 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 14:28:05.558 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 9.5937ms
+2026-02-08 14:28:05.558 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 14:28:05.558 +05:30 [INF] HTTP GET /api/tickets responded 200 in 10ms | UserId=79b915ef-074e-403e-b073-2775202c6e7f Role=Admin
+2026-02-08 14:28:05.558 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 11.8302ms
+2026-02-08 14:28:19.957 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/admin/users - null null
+2026-02-08 14:28:19.958 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:28:19.958 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/admin/users - 204 null null 2.0078ms
+2026-02-08 14:28:19.966 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/admin/users - null null
+2026-02-08 14:28:19.967 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:28:19.969 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api)'
+2026-02-08 14:28:19.969 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller TicketsProject.Api.Controllers.AdminController (TicketsProject.Api).
+2026-02-08 14:28:22.799 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2026-02-08 14:28:22.802 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 14:28:22.804 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 14:28:22.806 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 14:28:22.808 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 14:28:22.810 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 14:28:22.810 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Admin.AdminUserResult, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 14:28:22.810 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api) in 2840.9547ms
+2026-02-08 14:28:22.810 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AdminController.GetAllUsers (TicketsProject.Api)'
+2026-02-08 14:28:22.810 +05:30 [INF] HTTP GET /api/admin/users responded 200 in 2841ms | UserId=79b915ef-074e-403e-b073-2775202c6e7f Role=Admin
+2026-02-08 14:28:22.810 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/admin/users - 200 null application/json; charset=utf-8 2845.5537ms
+2026-02-08 14:29:31.398 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/auth/login - null null
+2026-02-08 14:29:31.399 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:29:31.399 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/auth/login - 204 null null 1.3981ms
+2026-02-08 14:29:31.415 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/auth/login - application/json 50
+2026-02-08 14:29:31.426 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:29:31.427 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 14:29:31.427 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicketsProject.Application.DTOs.Auth.LoginResponseDto]] Login(TicketsProject.Application.DTOs.Auth.LoginRequestDto) on controller TicketsProject.Api.Controllers.AuthController (TicketsProject.Api).
+2026-02-08 14:29:31.455 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-08 14:29:31.604 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 14:29:31.609 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-08 14:29:31.620 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [RefreshTokenExpiryTime] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2026-02-08 14:29:31.621 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Auth.LoginResponseDto'.
+2026-02-08 14:29:31.621 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api) in 193.6225ms
+2026-02-08 14:29:31.621 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 14:29:31.621 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 194ms | UserId=null Role=null
+2026-02-08 14:29:31.621 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/auth/login - 200 null application/json; charset=utf-8 208.4632ms
+2026-02-08 14:35:43.184 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 14:35:43.185 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:35:43.185 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 1.1679ms
+2026-02-08 14:35:43.195 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 14:35:43.195 +05:30 [INF] CORS policy execution successful.
+2026-02-08 14:35:43.201 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 14:35:43.201 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 14:35:43.239 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Status], [t].[CreatedAt]
+FROM [Tickets] AS [t]
+2026-02-08 14:35:43.240 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 14:35:43.240 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 39.1918ms
+2026-02-08 14:35:43.240 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 14:35:43.240 +05:30 [INF] HTTP GET /api/tickets responded 200 in 39ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 14:35:43.241 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 46.0114ms
+2026-02-08 18:02:30.821 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/auth/login - null null
+2026-02-08 18:02:30.822 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:02:30.831 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/auth/login - 204 null null 10.9382ms
+2026-02-08 18:02:30.845 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/auth/login - application/json 50
+2026-02-08 18:02:30.852 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:02:30.855 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '08-02-2026 10.39.31 AM', Current time (UTC): '08-02-2026 12.32.30 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-08 18:02:30.857 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '08-02-2026 10.39.31 AM', Current time (UTC): '08-02-2026 12.32.30 PM'.
+2026-02-08 18:02:30.857 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 18:02:30.858 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicketsProject.Application.DTOs.Auth.LoginResponseDto]] Login(TicketsProject.Application.DTOs.Auth.LoginRequestDto) on controller TicketsProject.Api.Controllers.AuthController (TicketsProject.Api).
+2026-02-08 18:02:30.935 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-08 18:02:31.140 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 18:02:31.145 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-08 18:02:31.159 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [RefreshTokenExpiryTime] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2026-02-08 18:02:31.159 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Auth.LoginResponseDto'.
+2026-02-08 18:02:31.160 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api) in 301.9554ms
+2026-02-08 18:02:31.160 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 18:02:31.160 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 302ms | UserId=null Role=null
+2026-02-08 18:02:31.160 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/auth/login - 200 null application/json; charset=utf-8 315.6119ms
+2026-02-08 18:02:37.976 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 18:02:37.977 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:02:37.977 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 0.7785ms
+2026-02-08 18:02:37.988 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 18:02:37.989 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:02:37.990 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 18:02:37.991 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:02:38.007 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Status], [t].[CreatedAt]
+FROM [Tickets] AS [t]
+2026-02-08 18:02:38.009 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 18:02:38.010 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 18.78ms
+2026-02-08 18:02:38.010 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 18:02:38.010 +05:30 [INF] HTTP GET /api/tickets responded 200 in 19ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:02:38.011 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 24.1379ms
+2026-02-08 18:11:17.405 +05:30 [INF] User profile is available. Using 'C:\Users\gauta\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-08 18:11:20.375 +05:30 [INF] Executed DbCommand (148ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-08 18:11:20.575 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-08 18:11:20.580 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-08 18:11:21.796 +05:30 [INF] Now listening on: https://localhost:7073
+2026-02-08 18:11:21.796 +05:30 [INF] Now listening on: http://localhost:5087
+2026-02-08 18:11:22.055 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-08 18:11:22.055 +05:30 [INF] Hosting environment: Development
+2026-02-08 18:11:22.055 +05:30 [INF] Content root path: C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Api
+2026-02-08 18:11:23.488 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/swagger/index.html - null null
+2026-02-08 18:11:24.278 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/swagger/index.html - 200 null text/html;charset=utf-8 822.8618ms
+2026-02-08 18:11:24.377 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/_vs/browserLink - null null
+2026-02-08 18:11:24.377 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-08 18:11:24.426 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/_framework/aspnetcore-browser-refresh.js - 200 16521 application/javascript; charset=utf-8 51.4693ms
+2026-02-08 18:11:24.562 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/_vs/browserLink - 200 null text/javascript; charset=UTF-8 184.7717ms
+2026-02-08 18:11:24.622 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/swagger/v1/swagger.json - null null
+2026-02-08 18:11:24.719 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 96.4594ms
+2026-02-08 18:20:49.226 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 18:20:49.246 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:20:49.252 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 29.8701ms
+2026-02-08 18:20:49.262 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 18:20:49.270 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:20:49.639 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 18:20:49.682 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:20:49.691 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-02-08 18:20:50.004 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 18:20:50.040 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 18:20:50.089 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 398.3484ms
+2026-02-08 18:20:50.091 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 18:20:50.092 +05:30 [INF] HTTP GET /api/tickets responded 200 in 457ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:20:50.113 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 850.6157ms
+2026-02-08 18:20:54.340 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/auth/login - null null
+2026-02-08 18:20:54.342 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:20:54.345 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/auth/login - 204 null null 5.575ms
+2026-02-08 18:20:54.352 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/auth/login - application/json 50
+2026-02-08 18:20:54.357 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:20:54.367 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 18:20:54.403 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TicketsProject.Application.DTOs.Auth.LoginResponseDto]] Login(TicketsProject.Application.DTOs.Auth.LoginRequestDto) on controller TicketsProject.Api.Controllers.AuthController (TicketsProject.Api).
+2026-02-08 18:20:54.582 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-08 18:20:54.969 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-08 18:20:55.043 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-08 18:20:55.274 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [RefreshTokenExpiryTime] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2026-02-08 18:20:55.318 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Auth.LoginResponseDto'.
+2026-02-08 18:20:55.321 +05:30 [INF] Executed action TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api) in 917.7882ms
+2026-02-08 18:20:55.321 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.AuthController.Login (TicketsProject.Api)'
+2026-02-08 18:20:55.321 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 954ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:20:55.322 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/auth/login - 200 null application/json; charset=utf-8 969.6618ms
+2026-02-08 18:32:35.091 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/1 - null null
+2026-02-08 18:32:35.104 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:32:35.105 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/1 - 204 null null 14.5413ms
+2026-02-08 18:32:35.128 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets/1 - null null
+2026-02-08 18:32:35.131 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:32:35.147 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 18:32:35.163 +05:30 [INF] Route matched with {action = "GetDetail", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDetail(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:32:35.244 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:32:35.333 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:32:35.334 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 18:32:35.339 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api) in 174.7952ms
+2026-02-08 18:32:35.339 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 18:32:35.339 +05:30 [INF] HTTP GET /api/tickets/1 responded 200 in 191ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:32:35.339 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets/1 - 200 null application/json; charset=utf-8 211.153ms
+2026-02-08 18:32:50.532 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/5 - null null
+2026-02-08 18:32:50.533 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:32:50.534 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/5 - 204 null null 4.5487ms
+2026-02-08 18:32:50.544 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets/5 - null null
+2026-02-08 18:32:50.546 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:32:50.558 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 18:32:50.559 +05:30 [INF] Route matched with {action = "GetDetail", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDetail(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:32:50.579 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:32:50.587 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:32:50.588 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 18:32:50.589 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api) in 29.2943ms
+2026-02-08 18:32:50.589 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 18:32:50.589 +05:30 [INF] HTTP GET /api/tickets/5 responded 200 in 31ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:32:50.590 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets/5 - 200 null application/json; charset=utf-8 46.0266ms
+2026-02-08 18:35:24.469 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/1 - null null
+2026-02-08 18:35:24.470 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:35:24.471 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/1 - 204 null null 2.8585ms
+2026-02-08 18:35:24.486 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets/1 - null null
+2026-02-08 18:35:24.495 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:35:24.497 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 18:35:24.498 +05:30 [INF] Route matched with {action = "GetDetail", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDetail(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:35:24.538 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:35:24.544 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:35:24.546 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 18:35:24.546 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api) in 47.9149ms
+2026-02-08 18:35:24.547 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 18:35:24.547 +05:30 [INF] HTTP GET /api/tickets/1 responded 200 in 49ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:35:24.547 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets/1 - 200 null application/json; charset=utf-8 61.6572ms
+2026-02-08 18:35:32.296 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/5 - null null
+2026-02-08 18:35:32.296 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:35:32.297 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/5 - 204 null null 2.6534ms
+2026-02-08 18:35:32.308 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets/5 - null null
+2026-02-08 18:35:32.308 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:35:32.311 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 18:35:32.311 +05:30 [INF] Route matched with {action = "GetDetail", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDetail(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:35:32.324 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:35:32.331 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:35:32.332 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 18:35:32.333 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api) in 22.0099ms
+2026-02-08 18:35:32.333 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 18:35:32.334 +05:30 [INF] HTTP GET /api/tickets/5 responded 200 in 23ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:35:32.335 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets/5 - 200 null application/json; charset=utf-8 27.5404ms
+2026-02-08 18:47:36.037 +05:30 [INF] User profile is available. Using 'C:\Users\gauta\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-08 18:47:38.776 +05:30 [INF] Executed DbCommand (113ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-08 18:47:38.963 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-08 18:47:38.967 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-08 18:47:39.981 +05:30 [INF] Now listening on: https://localhost:7073
+2026-02-08 18:47:39.981 +05:30 [INF] Now listening on: http://localhost:5087
+2026-02-08 18:47:40.319 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-08 18:47:40.320 +05:30 [INF] Hosting environment: Development
+2026-02-08 18:47:40.320 +05:30 [INF] Content root path: C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Api
+2026-02-08 18:47:42.253 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/swagger/index.html - null null
+2026-02-08 18:47:43.031 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/swagger/index.html - 200 null text/html;charset=utf-8 808.9597ms
+2026-02-08 18:47:43.276 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/_vs/browserLink - null null
+2026-02-08 18:47:43.306 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-08 18:47:43.350 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/_framework/aspnetcore-browser-refresh.js - 200 16521 application/javascript; charset=utf-8 43.77ms
+2026-02-08 18:47:43.463 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/_vs/browserLink - 200 null text/javascript; charset=UTF-8 187.7464ms
+2026-02-08 18:47:43.515 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/swagger/v1/swagger.json - null null
+2026-02-08 18:47:43.572 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 57.2702ms
+2026-02-08 18:52:33.212 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 18:52:33.277 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:52:33.296 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 82.1616ms
+2026-02-08 18:52:33.313 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 18:52:33.327 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:52:33.839 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 18:52:33.880 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:52:33.890 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-02-08 18:52:34.190 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 18:52:34.224 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 18:52:34.269 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 381.8317ms
+2026-02-08 18:52:34.270 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 18:52:34.271 +05:30 [INF] HTTP GET /api/tickets responded 200 in 436ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:52:34.283 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 970.0069ms
+2026-02-08 18:55:41.045 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 18:55:41.047 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:55:41.047 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 3.0295ms
+2026-02-08 18:55:41.078 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 18:55:41.103 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:55:41.112 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 18:55:41.113 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:55:41.160 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 18:55:41.163 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 18:55:41.164 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 50.2221ms
+2026-02-08 18:55:41.164 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 18:55:41.164 +05:30 [INF] HTTP GET /api/tickets responded 200 in 51ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:55:41.164 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 91.3985ms
+2026-02-08 18:55:43.969 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/1 - null null
+2026-02-08 18:55:43.971 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:55:43.972 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/1 - 204 null null 3.7592ms
+2026-02-08 18:55:43.980 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets/1 - null null
+2026-02-08 18:55:43.982 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:55:43.997 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 18:55:44.049 +05:30 [INF] Route matched with {action = "GetDetail", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDetail(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:55:44.112 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:55:44.198 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:55:44.201 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 18:55:44.210 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api) in 160.7726ms
+2026-02-08 18:55:44.211 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 18:55:44.211 +05:30 [INF] HTTP GET /api/tickets/1 responded 200 in 214ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:55:44.211 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets/1 - 200 null application/json; charset=utf-8 231.0387ms
+2026-02-08 18:55:47.893 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/5 - null null
+2026-02-08 18:55:47.894 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:55:47.895 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/5 - 204 null null 2.2492ms
+2026-02-08 18:55:47.905 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets/5 - null null
+2026-02-08 18:55:47.907 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:55:47.911 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 18:55:47.913 +05:30 [INF] Route matched with {action = "GetDetail", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDetail(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:55:47.949 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:55:47.961 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:55:47.962 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 18:55:47.962 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api) in 49.4233ms
+2026-02-08 18:55:47.963 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetDetail (TicketsProject.Api)'
+2026-02-08 18:55:47.963 +05:30 [INF] HTTP GET /api/tickets/5 responded 200 in 51ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:55:47.963 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets/5 - 200 null application/json; charset=utf-8 58.4641ms
+2026-02-08 18:56:10.808 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/5/assign - null null
+2026-02-08 18:56:10.810 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:56:10.810 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/5/assign - 204 null null 3.1256ms
+2026-02-08 18:56:10.842 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/tickets/5/assign - null 0
+2026-02-08 18:56:10.850 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:56:10.856 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api)'
+2026-02-08 18:56:10.880 +05:30 [INF] Route matched with {action = "Assign", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Assign(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:56:10.920 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:56:11.243 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TicketAgents] ([AgentId], [AssignedAt], [IsPrimary], [TicketId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-02-08 18:56:11.343 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [TicketId], [UserId], [UserRole])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-02-08 18:56:11.357 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:56:11.363 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 18:56:11.364 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 18:56:11.364 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api) in 484.0745ms
+2026-02-08 18:56:11.364 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api)'
+2026-02-08 18:56:11.364 +05:30 [INF] HTTP POST /api/tickets/5/assign responded 200 in 508ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:56:11.365 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/tickets/5/assign - 200 null application/json; charset=utf-8 523.9004ms
+2026-02-08 18:56:11.377 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 18:56:11.378 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:56:11.378 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 1.8004ms
+2026-02-08 18:56:11.385 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 18:56:11.386 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:56:11.388 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 18:56:11.388 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:56:11.404 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 18:56:11.407 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 18:56:11.408 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 19.4328ms
+2026-02-08 18:56:11.408 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 18:56:11.408 +05:30 [INF] HTTP GET /api/tickets responded 200 in 20ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:56:11.409 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 23.4233ms
+2026-02-08 18:58:45.720 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 18:58:45.721 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:58:45.723 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 4.1371ms
+2026-02-08 18:58:45.735 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 18:58:45.736 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:58:45.739 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 18:58:45.740 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:58:45.776 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 18:58:45.779 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 18:58:45.779 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 39.5985ms
+2026-02-08 18:58:45.780 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 18:58:45.780 +05:30 [INF] HTTP GET /api/tickets responded 200 in 40ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 18:58:45.780 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 45.4588ms
+2026-02-08 18:58:48.072 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/5/assign - null null
+2026-02-08 18:58:48.073 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:58:48.074 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/5/assign - 204 null null 2.454ms
+2026-02-08 18:58:48.089 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/tickets/5/assign - null 0
+2026-02-08 18:58:48.093 +05:30 [INF] CORS policy execution successful.
+2026-02-08 18:58:48.096 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api)'
+2026-02-08 18:58:48.096 +05:30 [INF] Route matched with {action = "Assign", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Assign(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 18:59:24.875 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:00:30.730 +05:30 [INF] Executed DbCommand (74ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TicketAgents] ([AgentId], [AssignedAt], [IsPrimary], [TicketId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-02-08 19:00:31.913 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [TicketId], [UserId], [UserRole])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-02-08 19:00:34.271 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:00:34.302 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:00:40.810 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 19:00:43.169 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api) in 115072.6335ms
+2026-02-08 19:00:43.169 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api)'
+2026-02-08 19:00:45.198 +05:30 [INF] HTTP POST /api/tickets/5/assign responded 200 in 116374ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:00:45.393 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/tickets/5/assign - 200 null application/json; charset=utf-8 117303.5916ms
+2026-02-08 19:00:45.430 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 19:00:45.431 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:00:45.432 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 2.3747ms
+2026-02-08 19:00:45.458 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 19:00:45.459 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:00:45.473 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:00:45.473 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:00:45.534 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 19:00:45.537 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 19:00:45.550 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 52.7421ms
+2026-02-08 19:00:45.551 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:00:45.554 +05:30 [INF] HTTP GET /api/tickets responded 200 in 83ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:00:45.555 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 96.6282ms
+2026-02-08 19:00:56.264 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 19:00:56.265 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:00:56.266 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 2.609ms
+2026-02-08 19:00:56.285 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 19:00:56.290 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:00:56.294 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:00:56.309 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:00:56.348 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 19:00:56.350 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 19:00:56.358 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 48.2623ms
+2026-02-08 19:00:56.358 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:00:56.358 +05:30 [INF] HTTP GET /api/tickets responded 200 in 63ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:00:56.358 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 74.1668ms
+2026-02-08 19:10:06.999 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 19:10:07.001 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:10:07.001 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 2.3121ms
+2026-02-08 19:10:07.010 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 19:10:07.011 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:10:07.012 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:10:07.012 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:10:07.146 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 19:10:07.147 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 19:10:07.148 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 135.9931ms
+2026-02-08 19:10:07.148 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:10:07.149 +05:30 [INF] HTTP GET /api/tickets responded 200 in 136ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:10:07.149 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 139.4028ms
+2026-02-08 19:13:56.945 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 19:13:56.947 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:13:56.948 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 2.7749ms
+2026-02-08 19:13:56.959 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 19:13:56.961 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:13:56.962 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:13:56.963 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:13:57.010 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 19:13:57.012 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 19:13:57.013 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 49.8274ms
+2026-02-08 19:13:57.013 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:13:57.013 +05:30 [INF] HTTP GET /api/tickets responded 200 in 50ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:13:57.014 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 54.8827ms
+2026-02-08 19:14:04.643 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/5/assign - null null
+2026-02-08 19:14:04.644 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:14:04.644 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/5/assign - 204 null null 0.9564ms
+2026-02-08 19:14:04.651 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/tickets/5/assign - null 0
+2026-02-08 19:14:04.653 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:14:04.655 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api)'
+2026-02-08 19:14:04.662 +05:30 [INF] Route matched with {action = "Assign", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Assign(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:14:07.422 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:14:07.435 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TicketAgents] ([AgentId], [AssignedAt], [IsPrimary], [TicketId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-02-08 19:14:07.443 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [TicketId], [UserId], [UserRole])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-02-08 19:14:07.446 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:14:07.452 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:14:07.452 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 19:14:07.456 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api) in 2793.8779ms
+2026-02-08 19:14:07.456 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api)'
+2026-02-08 19:14:07.456 +05:30 [INF] HTTP POST /api/tickets/5/assign responded 200 in 2801ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:14:07.457 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/tickets/5/assign - 200 null application/json; charset=utf-8 2805.5423ms
+2026-02-08 19:14:07.474 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 19:14:07.474 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:14:07.474 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 1.5555ms
+2026-02-08 19:14:07.480 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 19:14:07.481 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:14:07.482 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:14:07.482 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:14:07.484 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/5/status - null null
+2026-02-08 19:14:07.484 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:14:07.485 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/5/status - 204 null null 2.3095ms
+2026-02-08 19:14:07.493 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 19:14:07.497 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 19:14:07.500 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7073/api/tickets/5/status - application/json 23
+2026-02-08 19:14:07.500 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 18.2306ms
+2026-02-08 19:14:07.501 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:14:07.501 +05:30 [INF] HTTP GET /api/tickets responded 200 in 18ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:14:07.501 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:14:07.508 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 28.2181ms
+2026-02-08 19:14:07.508 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.UpdateStatus (TicketsProject.Api)'
+2026-02-08 19:14:07.524 +05:30 [INF] Route matched with {action = "UpdateStatus", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateStatus(Int32, TicketsProject.Application.DTOs.Tickets.UpdateTicketStatusDto) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:14:56.649 +05:30 [INF] User profile is available. Using 'C:\Users\gauta\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-08 19:14:59.411 +05:30 [INF] Executed DbCommand (130ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-08 19:14:59.605 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-08 19:14:59.608 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-08 19:15:00.504 +05:30 [INF] Now listening on: https://localhost:7073
+2026-02-08 19:15:00.504 +05:30 [INF] Now listening on: http://localhost:5087
+2026-02-08 19:15:00.731 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-08 19:15:00.733 +05:30 [INF] Hosting environment: Development
+2026-02-08 19:15:00.733 +05:30 [INF] Content root path: C:\ASP.NET CORE\TicketsProject.Api\TicketsProject.Api
+2026-02-08 19:15:01.967 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/swagger/index.html - null null
+2026-02-08 19:15:02.729 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/swagger/index.html - 200 null text/html;charset=utf-8 798.3185ms
+2026-02-08 19:15:02.811 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-08 19:15:02.811 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/_vs/browserLink - null null
+2026-02-08 19:15:02.861 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/_framework/aspnetcore-browser-refresh.js - 200 16521 application/javascript; charset=utf-8 50.719ms
+2026-02-08 19:15:02.994 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/_vs/browserLink - 200 null text/javascript; charset=UTF-8 183.5097ms
+2026-02-08 19:15:03.037 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/swagger/v1/swagger.json - null null
+2026-02-08 19:15:03.091 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 54.6979ms
+2026-02-08 19:15:24.417 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/5/assign - null null
+2026-02-08 19:15:24.465 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:15:24.473 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/5/assign - 204 null null 56.4118ms
+2026-02-08 19:15:24.483 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/tickets/5/assign - null 0
+2026-02-08 19:15:24.493 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:15:24.810 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api)'
+2026-02-08 19:15:24.861 +05:30 [INF] Route matched with {action = "Assign", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Assign(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:15:24.870 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-02-08 19:15:32.831 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:15:33.211 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TicketAgents] ([AgentId], [AssignedAt], [IsPrimary], [TicketId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-02-08 19:15:33.285 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [TicketId], [UserId], [UserRole])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-02-08 19:15:33.297 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:15:33.341 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:15:33.358 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 19:15:33.398 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api) in 8529.0312ms
+2026-02-08 19:15:33.399 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api)'
+2026-02-08 19:15:33.401 +05:30 [INF] HTTP POST /api/tickets/5/assign responded 200 in 8595ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:15:33.413 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/tickets/5/assign - 200 null application/json; charset=utf-8 8930.3228ms
+2026-02-08 19:15:33.424 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 19:15:33.425 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/5/status - null null
+2026-02-08 19:15:33.426 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:15:33.426 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:15:33.427 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 3.0142ms
+2026-02-08 19:15:33.427 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/5/status - 204 null null 3.1914ms
+2026-02-08 19:15:33.452 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 19:15:33.452 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7073/api/tickets/5/status - application/json 23
+2026-02-08 19:15:33.453 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:15:33.453 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:15:33.462 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.UpdateStatus (TicketsProject.Api)'
+2026-02-08 19:15:33.462 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:15:33.471 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:15:33.472 +05:30 [INF] Route matched with {action = "UpdateStatus", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateStatus(Int32, TicketsProject.Application.DTOs.Tickets.UpdateTicketStatusDto) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:15:34.801 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:15:35.899 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Tickets] SET [Status] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2026-02-08 19:15:35.907 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [TicketId], [UserId], [UserRole])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-02-08 19:15:35.913 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:15:35.918 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:15:35.919 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 19:15:35.919 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.UpdateStatus (TicketsProject.Api) in 2447.3775ms
+2026-02-08 19:15:35.919 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.UpdateStatus (TicketsProject.Api)'
+2026-02-08 19:15:35.920 +05:30 [INF] HTTP PUT /api/tickets/5/status responded 200 in 2457ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:15:35.920 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7073/api/tickets/5/status - 200 null application/json; charset=utf-8 2467.9341ms
+2026-02-08 19:15:35.931 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 19:15:35.935 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 19:15:35.944 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 2472.4521ms
+2026-02-08 19:15:35.944 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:15:35.944 +05:30 [INF] HTTP GET /api/tickets responded 200 in 2481ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:15:35.944 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 2504.7374ms
+2026-02-08 19:15:35.958 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 19:15:35.958 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:15:35.959 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 1.5206ms
+2026-02-08 19:15:35.964 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 19:15:35.964 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:15:35.971 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:15:35.971 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:15:35.979 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 19:15:35.982 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 19:15:35.982 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 11.1907ms
+2026-02-08 19:15:35.983 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:15:35.983 +05:30 [INF] HTTP GET /api/tickets responded 200 in 11ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:15:35.983 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 19.9501ms
+2026-02-08 19:17:01.329 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 19:17:01.336 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:17:01.345 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 16.0444ms
+2026-02-08 19:17:01.356 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 19:17:01.357 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:17:01.359 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:17:01.360 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:17:01.427 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 19:17:01.429 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 19:17:01.431 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 70.5191ms
+2026-02-08 19:17:01.432 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:17:01.432 +05:30 [INF] HTTP GET /api/tickets responded 200 in 72ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:17:01.433 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 78.7678ms
+2026-02-08 19:17:03.298 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/4/assign - null null
+2026-02-08 19:17:03.298 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:17:03.298 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/4/assign - 204 null null 0.8431ms
+2026-02-08 19:17:03.303 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/tickets/4/assign - null 0
+2026-02-08 19:17:03.303 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:17:03.304 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api)'
+2026-02-08 19:17:03.305 +05:30 [INF] Route matched with {action = "Assign", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Assign(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:17:10.497 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:17:11.343 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TicketAgents] ([AgentId], [AssignedAt], [IsPrimary], [TicketId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-02-08 19:17:11.781 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [TicketId], [UserId], [UserRole])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-02-08 19:17:15.031 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:17:15.056 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:17:15.928 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 19:17:18.160 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api) in 14854.8133ms
+2026-02-08 19:17:18.160 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api)'
+2026-02-08 19:17:20.548 +05:30 [INF] HTTP POST /api/tickets/4/assign responded 200 in 16321ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:17:20.719 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/tickets/4/assign - 200 null application/json; charset=utf-8 17416.7465ms
+2026-02-08 19:17:20.743 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 19:17:20.744 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/4/status - null null
+2026-02-08 19:17:20.744 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:17:20.744 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:17:20.744 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 3.0547ms
+2026-02-08 19:17:20.744 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/4/status - 204 null null 0.7347ms
+2026-02-08 19:17:20.781 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7073/api/tickets/4/status - application/json 23
+2026-02-08 19:17:20.781 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 19:17:20.782 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:17:20.782 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:17:20.794 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.UpdateStatus (TicketsProject.Api)'
+2026-02-08 19:17:20.794 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:17:20.796 +05:30 [INF] Route matched with {action = "UpdateStatus", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateStatus(Int32, TicketsProject.Application.DTOs.Tickets.UpdateTicketStatusDto) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:17:20.796 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:17:33.427 +05:30 [INF] Executed DbCommand (12,588ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 19:17:33.468 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 19:17:33.506 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 12709.5995ms
+2026-02-08 19:17:33.506 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:17:33.507 +05:30 [INF] HTTP GET /api/tickets responded 200 in 12713ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:17:33.508 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 12728.215ms
+2026-02-08 19:17:33.576 +05:30 [INF] Executed DbCommand (58ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:17:42.520 +05:30 [INF] Executed DbCommand (32ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Tickets] SET [Status] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2026-02-08 19:18:43.580 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [TicketId], [UserId], [UserRole])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-02-08 19:18:46.184 +05:30 [INF] Executed DbCommand (58ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:18:46.193 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:18:47.611 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 19:18:50.889 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.UpdateStatus (TicketsProject.Api) in 90092.3481ms
+2026-02-08 19:18:50.889 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.UpdateStatus (TicketsProject.Api)'
+2026-02-08 19:18:50.889 +05:30 [INF] HTTP PUT /api/tickets/4/status responded 200 in 90095ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:18:50.890 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7073/api/tickets/4/status - 200 null application/json; charset=utf-8 90110.0846ms
+2026-02-08 19:18:50.935 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 19:18:50.935 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:18:50.936 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 1.2121ms
+2026-02-08 19:18:50.948 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 19:18:50.949 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:18:50.951 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:18:50.951 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:18:50.968 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 19:18:50.969 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 19:18:50.970 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 18.5703ms
+2026-02-08 19:18:50.970 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:18:50.970 +05:30 [INF] HTTP GET /api/tickets responded 200 in 19ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:18:50.971 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 24.5102ms
+2026-02-08 19:20:08.356 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/1/assign - null null
+2026-02-08 19:20:08.357 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:20:08.357 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/1/assign - 204 null null 1.3019ms
+2026-02-08 19:20:08.363 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7073/api/tickets/1/assign - null 0
+2026-02-08 19:20:08.363 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:20:08.364 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api)'
+2026-02-08 19:20:08.364 +05:30 [INF] Route matched with {action = "Assign", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Assign(Int32) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:20:11.004 +05:30 [INF] Executed DbCommand (48ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:20:11.608 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TicketAgents] ([AgentId], [AssignedAt], [IsPrimary], [TicketId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-02-08 19:20:11.988 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [TicketId], [UserId], [UserRole])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-02-08 19:20:13.492 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:20:13.530 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CreatedAt], [t].[CustomerId], [t].[InitialScreenshotUrl]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:20:14.768 +05:30 [INF] Executing OkObjectResult, writing value of type 'TicketsProject.Application.DTOs.Tickets.TicketDetailDto'.
+2026-02-08 19:20:16.407 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api) in 8042.3273ms
+2026-02-08 19:20:16.407 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.Assign (TicketsProject.Api)'
+2026-02-08 19:20:19.075 +05:30 [INF] HTTP POST /api/tickets/1/assign responded 200 in 9438ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:20:19.264 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7073/api/tickets/1/assign - 200 null application/json; charset=utf-8 10902.6401ms
+2026-02-08 19:20:19.305 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets/1/status - null null
+2026-02-08 19:20:19.305 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7073/api/tickets - null null
+2026-02-08 19:20:19.306 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:20:19.306 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:20:19.307 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets - 204 null null 1.8865ms
+2026-02-08 19:20:19.307 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7073/api/tickets/1/status - 204 null null 1.6365ms
+2026-02-08 19:20:19.347 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7073/api/tickets - null null
+2026-02-08 19:20:19.347 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7073/api/tickets/1/status - application/json 23
+2026-02-08 19:20:19.347 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:20:19.347 +05:30 [INF] CORS policy execution successful.
+2026-02-08 19:20:19.354 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:20:19.355 +05:30 [INF] Executing endpoint 'TicketsProject.Api.Controllers.TicketController.UpdateStatus (TicketsProject.Api)'
+2026-02-08 19:20:19.356 +05:30 [INF] Route matched with {action = "UpdateStatus", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateStatus(Int32, TicketsProject.Application.DTOs.Tickets.UpdateTicketStatusDto) on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:20:19.356 +05:30 [INF] Route matched with {action = "GetTickets", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTickets() on controller TicketsProject.Api.Controllers.TicketController (TicketsProject.Api).
+2026-02-08 19:20:20.757 +05:30 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[Status], [t].[CustomerId], (
+    SELECT TOP(1) [a].[Email]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Id] = [t].[CustomerId]) AS [CustomerEmail], [t].[CreatedAt], [t].[InProgressAt], [t].[ClosedAt]
+FROM [Tickets] AS [t]
+2026-02-08 19:20:20.777 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TicketsProject.Application.DTOs.Tickets.TicketListDto, TicketsProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-08 19:20:20.783 +05:30 [INF] Executed action TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api) in 1426.5984ms
+2026-02-08 19:20:20.783 +05:30 [INF] Executed endpoint 'TicketsProject.Api.Controllers.TicketController.GetTickets (TicketsProject.Api)'
+2026-02-08 19:20:20.792 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__ticketId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[ClosedAt], [t].[CreatedAt], [t].[CustomerConfirmedResolution], [t].[CustomerId], [t].[Description], [t].[InProgressAt], [t].[InitialScreenshotUrl], [t].[Status], [t].[Title]
+FROM [Tickets] AS [t]
+WHERE [t].[Id] = @__ticketId_0
+2026-02-08 19:20:20.793 +05:30 [INF] HTTP GET /api/tickets responded 200 in 1438ms | UserId=54c3eccd-8864-4768-b60e-7deab94f20a2 Role=Agent
+2026-02-08 19:20:20.795 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7073/api/tickets - 200 null application/json; charset=utf-8 1448.6128ms

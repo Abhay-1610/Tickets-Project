@@ -1,13 +1,14 @@
-# Visual Studio
-.vs/
+# Backend
+appsettings.Development.json
+appsettings.Local.json
+
+# Frontend
+.env
+.env.local
+.env.development
+
+# General
 bin/
 obj/
-
-# Node
+.vs/
 node_modules/
-dist/
-build/
-
-# OS
-.DS_Store
-Thumbs.db

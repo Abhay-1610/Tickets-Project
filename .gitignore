@@ -1,9 +1,11 @@
 # Backend
-appsettings.Development.json
-appsettings.Local.json
+
+Backend/TicketsProject.Api/appsettings.json
+Backend/TicketsProject.Api/appsettings.Development.json
+
 
 # Frontend
-.env
+Frontend/.env
 .env.local
 .env.development
 
